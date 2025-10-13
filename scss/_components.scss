@@ -1,0 +1,119 @@
+@use "_colors.scss" as *;
+@use "_mixins.scss" as *;
+
+.button {
+  max-width: toRem(266);
+  background-color: $black;
+  flex-shrink: 0;
+  color: $white;
+  border-radius: toRem(8);
+  transition: background-color 0.5s, color 0.5s;
+
+  @media (any-hover: hover) and (any-pointer: fine) {
+    &:hover {
+      background-color: $sky;
+      color: $black;
+    }
+  }
+
+  &--header {
+    padding: toRem(13) toRem(22) toRem(17) toRem(22);
+    color: $almostWhite;
+    font-size: toRem(24);
+    letter-spacing: -0.72;
+    text-transform: uppercase;
+    border-radius: toRem(7);
+  }
+}
+
+.gallery-title {
+  font-size: toRem(48);
+  font-weight: 900;
+  color: $black;
+  text-align: left;
+  position: relative;
+
+  &--indent {
+    position: relative;
+    margin-bottom: toRem(118);
+  }
+
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 45%;
+    left: 17%;
+    background: url(../img/svg/titleDecor.svg) center / contain no-repeat;
+    width: toRem(186);
+    height: toRem(34);
+  }
+}
+
+.product {
+  // .product__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: toRem(484);
+  }
+
+  // .product__image
+  &__image {
+    margin-bottom: toRem(32);
+    border-radius: toRem(20);
+    object-fit: cover;
+    transition: scale 0.5s;
+    flex-shrink: 0;
+
+    @media (any-hover: hover) and (any-pointer: fine) {
+      &:hover {
+        scale: 1.02;
+      }
+    }
+  }
+
+  // .product__name
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: toRem(10);
+    flex-wrap: wrap;
+    font-size: toRem(28);
+    font-weight: 500;
+    color: $almostBlack;
+    letter-spacing: toRem(-2);
+    transition: color 0.5s;
+    word-break: break-word;
+
+    &::after {
+      content: "";
+      margin-left: auto;
+      background: url(../img/svg/arrow_right.svg) center / contain no-repeat;
+      width: toRem(28);
+      height: toRem(28);
+    }
+
+    @media (any-hover: hover) and (any-pointer: fine) {
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__link {
+    font-size: toRem(24);
+    font-weight: 500;
+    line-height: 1.5;
+    color: $explore;
+    text-transform: capitalize;
+
+    @media (any-hover: hover) and (any-pointer: fine) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

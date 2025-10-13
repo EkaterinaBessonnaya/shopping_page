@@ -1,0 +1,139 @@
+@use "_colors.scss" as *;
+@use "_mixins.scss" as *;
+@use "_components.scss" as *;
+
+.promo {
+  background-color: $promoSection;
+
+  // .promo__container
+  &__container {
+    max-width: toRem(1010);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: toRem(140);
+    padding-inline: toRem(20);
+
+    @media (max-width: toRem(1440)) {
+      .promo__title {
+        font-size: toRem(48);
+        max-width: toRem(880);
+      }
+
+      .promo__button {
+        padding: toRem(15) toRem(40);
+      }
+
+      .promo__input::placeholder {
+        font-size: toRem(18);
+      }
+
+      .promo__input {
+        padding: toRem(27);
+      }
+    }
+
+    @media (max-width: toRem(840)) {
+      .promo__title {
+        font-size: toRem(36);
+      }
+
+      .promo__button {
+        font-size: toRem(28);
+      }
+    }
+
+    @media (max-width: toRem(600)) {
+			.promo__title {
+        font-size: toRem(28);
+      }
+
+      .promo__form {
+				display: flex;
+				flex-direction: column;
+				gap: toRem(10);
+			}
+
+			.promo__input {
+				padding: toRem(15) toRem(40);
+			}
+
+			.promo__button {
+				max-width: toRem(547);
+				width: 100%;
+				margin-right: toRem(0);
+			}
+    }
+  }
+
+  // .promo__title
+  &__title {
+    font-size: toRem(55);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 3%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: toRem(37);
+  }
+
+  & p {
+    font-size: toRem(32);
+    line-height: 1.1;
+    letter-spacing: 3%;
+		text-align: center;
+    color: $promoParagraph;
+    margin-bottom: toRem(49);
+
+    @media (max-width: toRem(1440)) {
+      font-size: toRem(24);
+    }
+
+    @media (max-width: toRem(840)) {
+      font-size: toRem(18);
+    }
+  }
+
+  // .promo__form
+  &__form {
+    max-width: toRem(547);
+    width: 100%;
+    display: grid;
+  }
+
+  // .promo__input
+  &__input {
+    width: 100%;
+    padding: toRem(27) toRem(0) toRem(35) toRem(27);
+    background-color: $white;
+    border-radius: toRem(10);
+
+    &::placeholder {
+      font-size: toRem(24);
+      color: $placeholderPromo;
+      transition: color 0.5s ease;
+    }
+
+    &:focus-visible::placeholder {
+      color: transparent;
+    }
+  }
+
+  // .promo__button
+  &__button {
+    font-size: toRem(33);
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding: toRem(17) toRem(35) toRem(15) toRem(38);
+    justify-self: end;
+    align-self: center;
+    margin-right: toRem(10);
+  }
+
+  &__input,
+  &__button {
+    grid-area: 1 / 1;
+  }
+}

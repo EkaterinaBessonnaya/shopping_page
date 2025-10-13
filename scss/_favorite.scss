@@ -1,0 +1,53 @@
+@use "_colors.scss" as *;
+@use "_mixins.scss" as *;
+@use "_components.scss" as *;
+
+.favorite {
+  // .favorite__contaiter
+  &__contaiter {
+    max-width: toRem(1720);
+    width: 100%;
+    padding-inline: toRem(100);
+
+    @media (max-width: toRem(1215)) {
+      padding-inline: toRem(50);
+    }
+
+    @media (max-width: toRem(1115)) {
+      .favorite__list .product__item {
+        width: toRem(400);
+      }
+    }
+
+    @media (max-width: toRem(581)) {
+      .favorite__title {
+        font-size: toRem(30);
+      }
+
+      .gallery-title--indent {
+        margin-bottom: toRem(80);
+      }
+    }
+  }
+
+  // .favorite__title
+  &__title {
+		position: relative;
+    text-transform: capitalize;
+  }
+
+  // .favorite__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: toRem(47);
+  }
+}
+
+.favorite .gallery-title {
+  &::after {
+		position: absolute;
+    top: 55%;
+    left: 25%;
+  }
+}

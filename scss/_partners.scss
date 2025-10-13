@@ -1,0 +1,84 @@
+@use "_colors.scss" as *;
+@use "_mixins.scss" as *;
+@use "_components.scss" as *;
+
+.partners {
+  background-color: $mustardLighter;
+  width: 100%;
+
+  // .partners__container
+  &__container {
+    padding-block: toRem(58);
+    padding-inline: toRem(65);
+
+    @media (max-width: toRem(1046)) {
+      .partners__list {
+        gap: toRem(30) toRem(30);
+      }
+    }
+
+    @media (max-width: toRem(986)) {
+      padding-block: toRem(28);
+      padding-inline: toRem(25);
+
+      .partners__list {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: toRem(676)) {
+      .partners__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: toRem(20);
+      }
+    }
+  }
+
+  // .partners__list
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: toRem(20);
+  }
+}
+.partner {
+  // .partner__item
+  &__item {
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  // .partner__logo
+  &__logo {
+    &--hm {
+      width: toRem(118);
+      height: toRem(69);
+    }
+
+    &--obey {
+      width: toRem(122);
+      height: toRem(43);
+    }
+
+    &--shopify {
+      width: toRem(176);
+      height: toRem(61);
+    }
+
+    &--lacoste {
+      width: toRem(192);
+      height: toRem(57);
+    }
+
+    &--amazon {
+      width: toRem(166);
+      height: toRem(63);
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class*="--icon-"]::before {
+	content: "";
+  font-family: 'iconfont';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*="--icon-apps"]::before {
+	content: "\e900";
+}
+
+[class*="--icon-burger_menu"]::before {
+	content: "\e901";
+}
+
+[class*="--icon-cart"]::before {
+	content: "\e902";
+}
+
+[class*="--icon-facebook"]::before {
+	content: "\e903";
+}
+
+[class*="--icon-home"]::before {
+	content: "\e904";
+}
+
+[class*="--icon-instagram"]::before {
+	content: "\e905";
+}
+
+[class*="--icon-linkedIn"]::before {
+	content: "\e906";
+}
+
+[class*="--icon-logo"]::before {
+	content: "\e907";
+}
+
+[class*="--icon-search"]::before {
+	content: "\e908";
+}
+
+[class*="--icon-twitter"]::before {
+	content: "\e909";
+}
+
+[class*="--icon-user"]::before {
+	content: "\e90a";
+}

@@ -1,0 +1,48 @@
+@use "_colors.scss" as *;
+@use "_mixins.scss" as *;
+@use "_components.scss" as *;
+
+.page {
+  max-width: toRem(1920);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  // .page__hero
+  &__hero {
+    margin-bottom: toRem(63);
+  }
+
+  // .page__partners
+  &__partners {
+    margin-bottom: toRem(66);
+  }
+
+  // .page__new-products
+  &__new-products {
+    padding-bottom: toRem(190);
+
+    @media (max-width: toRem(900)) {
+      padding-bottom: toRem(90);
+    }
+  }
+
+  // .page__banner
+  &__banner {
+    margin-bottom: toRem(190);
+
+    @media (max-width: toRem(900)) {
+      margin-bottom: toRem(90);
+    }
+  }
+
+  // .page__favorite
+  &__favorite,
+  &__app {
+    margin-bottom: toRem(220);
+
+    @media (max-width: toRem(1440)) {
+      margin-bottom: toRem(150);
+    }
+  }
+}

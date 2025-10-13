@@ -1,0 +1,97 @@
+@use "_colors.scss" as *;
+@use "_mixins.scss" as *;
+
+.header {
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: toRem(15);
+    max-width: toRem(1720);
+    padding-block: toRem(46) toRem(56);
+    padding-inline: toRem(100);
+
+    @media (max-width: toRem(1120)) {
+      padding: toRem(30);
+
+      .header__list {
+        gap: toRem(20);
+      }
+    }
+
+    @media (max-width: toRem(725)) {
+      .header__button {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: toRem(695)) {
+      gap: toRem(20);
+    }
+
+    @media (max-width: toRem(556)) {
+      .header__item {
+        width: 100%;
+      }
+
+      .button--header {
+        width: 100%;
+      }
+    }
+  }
+
+  // .header__logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: toRem(13);
+  }
+
+  // .header__list
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: toRem(65);
+    flex-wrap: wrap;
+  }
+
+  // .header__item
+  &__item {
+    font-size: toRem(22);
+    font-weight: 500;
+    letter-spacing: toRem(0.22);
+    text-transform: uppercase;
+    color: $headerLink;
+  }
+
+  // .header__link
+  &__link {
+    transition: color 0.5s;
+
+    @media (any-hover: hover) and (any-pointer: fine) {
+      &:hover {
+        color: $mustard;
+      }
+    }
+  }
+}
+
+.logo {
+  // .logo__img
+  &__img {
+    width: toRem(31);
+    height: toRem(29);
+    flex-shrink: 0;
+  }
+
+  // .logo__text
+  &__text {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: toRem(40);
+    letter-spacing: 1.2;
+  }
+}

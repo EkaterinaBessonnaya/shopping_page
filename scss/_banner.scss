@@ -1,0 +1,195 @@
+@use "_colors.scss" as *;
+@use "_mixins.scss" as *;
+@use "_components.scss" as *;
+
+.banner {
+  background: $banner-gradient;
+
+  // .banner__container
+  &__container {
+    display: flex;
+    max-width: toRem(1920);
+    width: 100%;
+
+    @media (max-width: toRem(1800)) {
+      .banner__button {
+        padding: toRem(26) toRem(36);
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: toRem(2);
+        font-size: toRem(24);
+      }
+    }
+
+    @media (max-width: toRem(1440)) {
+      .banner__image-wrapper {
+        max-width: toRem(691);
+        width: 100%;
+      }
+
+      .banner__info {
+        max-width: toRem(760);
+        padding: toRem(68) toRem(52) toRem(68) toRem(67);
+      }
+
+      .banner__info > p {
+        font-size: toRem(32);
+        font-weight: 500;
+        letter-spacing: toRem(-2);
+        line-height: 1.2;
+      }
+
+      .banner__title {
+        font-size: toRem(78);
+        line-height: 1.4;
+      }
+
+      .banner__title-word--white {
+        max-width: toRem(410);
+        padding-inline: toRem(10);
+        background-color: $white;
+        transform: rotate(-2deg);
+      }
+    }
+
+    @media (max-width: toRem(1230)) {
+      .banner__decor-star {
+        display: none;
+      }
+    }
+
+    @media (max-width: toRem(1080)) {
+      .banner__image-wrapper,
+      .banner__info {
+        flex-basis: 50%;
+      }
+
+      .banner__title {
+        font-size: toRem(56);
+
+        &-word--white {
+          max-width: toRem(310);
+        }
+      }
+
+      .banner__time,
+      .banner__note {
+        font-size: toRem(28);
+      }
+
+      .banner__button {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: toRem(900)) {
+      flex-direction: column;
+
+      .banner__info {
+        padding: toRem(50);
+      }
+    }
+  }
+
+  // .banner__image-wrapper
+  &__image-wrapper {
+    display: flex;
+    position: relative;
+    width: toRem(991);
+  }
+
+  &__img {
+    background: url(../img/banner/banner.png) center / cover no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  // .banner__decor-star
+  &__decor-star {
+    position: absolute;
+
+    &:nth-of-type(1) {
+      top: toRem(84);
+      right: toRem(23);
+    }
+
+    &:nth-of-type(2) {
+      top: toRem(110);
+      left: toRem(36);
+    }
+
+    &:nth-of-type(3) {
+      top: toRem(400);
+      left: toRem(59);
+    }
+
+    &:nth-of-type(4) {
+      right: toRem(2);
+      bottom: toRem(54);
+    }
+  }
+
+  // .banner__info
+  &__info {
+    max-width: toRem(932);
+    width: 100%;
+    padding: toRem(128) toRem(199) toRem(155) toRem(67);
+  }
+
+  .banner__info > p {
+    font-size: toRem(36);
+    font-weight: 500;
+    letter-spacing: toRem(-2);
+    line-height: 1.4;
+    margin-bottom: toRem(41);
+    max-width: toRem(643);
+
+    @media (max-width: toRem(1080)) {
+      font-size: toRem(28);
+    }
+  }
+
+  // .banner__title
+  &__title {
+    font-size: toRem(111);
+    line-height: 1.2;
+    font-weight: 900;
+    color: $black;
+    text-transform: uppercase;
+    margin-bottom: toRem(33);
+  }
+
+  &__title-word {
+    &--white {
+      max-width: toRem(541);
+      background-color: $white;
+      transform: rotate(-2deg);
+    }
+  }
+
+  // .banner__time
+  &__time {
+    font-size: toRem(36);
+    font-weight: 700;
+    letter-spacing: toRem(2);
+    line-height: 1.4;
+  }
+
+  // .banner__note
+  &__note {
+    margin-bottom: toRem(50);
+    font-size: toRem(36);
+    letter-spacing: toRem(-2);
+    line-height: 1.4;
+  }
+
+  // .banner__button
+  &__button {
+    padding: toRem(26) toRem(51) toRem(38) toRem(51);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: toRem(2);
+    font-size: toRem(27);
+  }
+}

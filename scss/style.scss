@@ -1,0 +1,32 @@
+@use '_colors.scss' as *;
+@use '_mixins.scss' as *;
+@use '_components.scss' as *;
+@use '_iconfont.scss' as *;
+@use '_header.scss' as *;
+@use '_page.scss' as *;
+@use '_hero.scss' as *;
+@use '_partners.scss' as *;
+@use '_new-products.scss' as *;
+@use '_banner.scss' as *;
+@use '_favorite.scss' as *;
+@use '_app.scss' as *;
+@use '_promo.scss' as *;
+@use '_footer.scss' as *;
+
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	scroll-behavior: smooth;
+}
+
+.wrapper {
+	min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+
+[class*="__container"] {
+	max-width: toRem(1920);
+}

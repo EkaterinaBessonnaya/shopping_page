@@ -1,0 +1,139 @@
+@use "_colors.scss" as *;
+@use "_mixins.scss" as *;
+@use "_components.scss" as *;
+
+.footer {
+  font-family: "Roboto", sans-serif;
+  color: $footerText;
+
+  // .footer__container
+  &__container {
+    padding: toRem(119) toRem(100) toRem(147) toRem(100);
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(20);
+    background-color: $black;
+
+    @media (max-width: toRem(1440)) {
+      padding: toRem(70);
+
+      .footer__menu {
+        gap: toRem(58);
+      }
+
+      .footer__list-menu {
+        gap: toRem(16);
+      }
+
+      .footer__sub-title,
+      .footer__item-menu {
+        font-size: toRem(18);
+      }
+    }
+
+    @media (max-width: toRem(1065)) {
+      flex-direction: column;
+      gap: toRem(60);
+      padding: toRem(30);
+
+      .footer__content {
+        max-width: 100%;
+      }
+    }
+  }
+
+  // .footer__content
+  &__content {
+    max-width: toRem(415);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(32);
+  }
+
+  // .footer__title
+  &__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: toRem(40);
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  & p {
+    font-size: toRem(24);
+    line-height: 1.6;
+  }
+
+  // .footer__social-list
+  &__social-list {
+    display: flex;
+    gap: toRem(14);
+    flex-wrap: wrap;
+  }
+
+  // .footer__social-icon
+  &__social-icon {
+    width: toRem(52);
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    transition: scale 0.5s;
+
+    @media (any-hover: hover) and (any-pointer: fine) {
+    	&:hover {
+    		scale: 1.1;
+    	}
+    }
+  }
+
+  // .footer__menu
+  &__menu {
+    display: flex;
+    gap: toRem(188);
+    flex-wrap: wrap;
+  }
+
+  // .footer__column
+  &__column {
+    line-height: 1.6;
+  }
+
+  // .footer__sub-title
+  &__sub-title {
+    color: $footerSubTitle;
+    margin-bottom: toRem(16);
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    &--change-color {
+      color: $footerSubTitleLast;
+    }
+  }
+
+  // .footer__list-menu
+  &__list-menu {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(32);
+  }
+
+  // .footer__item-menu
+  &__item-menu,
+  &__sub-title {
+    font-size: toRem(24);
+    text-transform: capitalize;
+  }
+
+  &__item-menu {
+    cursor: pointer;
+    transition: color 0.3s;
+
+    @media (any-hover: hover) and (any-pointer: fine) {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
