@@ -728,8 +728,11 @@
   .new-products__container {
     padding-inline: 1.875rem;
   }
+  .new-products__container .new-products__list {
+    gap: 0.9375rem;
+  }
   .new-products__container .product__item {
-    max-width: 17.5rem;
+    max-width: 15.625rem;
   }
 }
 .new-products__title {

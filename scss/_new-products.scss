@@ -57,9 +57,13 @@
 
     @media (max-width: toRem(570)) {
       padding-inline: toRem(30);
-      
+
+      .new-products__list {
+        gap: toRem(15);
+      }
+
       .product__item {
-        max-width: toRem(280);
+        max-width: toRem(250);
       }
     }
   }
