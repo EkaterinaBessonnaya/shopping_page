@@ -47,11 +47,19 @@
       }
 
       .product__image {
-        height: toRem(400);
+        aspect-ratio: 1;
       }
 
       .product__name::after {
         display: none;
+      }
+    }
+
+    @media (max-width: toRem(570)) {
+      padding-inline: toRem(30);
+      
+      .product__item {
+        max-width: toRem(280);
       }
     }
   }

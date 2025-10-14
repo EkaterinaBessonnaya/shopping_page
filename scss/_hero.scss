@@ -39,14 +39,10 @@
         padding: toRem(50);
       }
 
-      .hero__title-word--whiteBG {
-        width: toRem(295);
-        height: toRem(92);
-      }
-
+      .hero__title-word--whiteBG,
       .hero__title-word--mustardBG {
-        width: toRem(295);
-        height: toRem(97);
+        max-width: toRem(365);
+        height: toRem(92);
       }
 
       .hero__info > p {
@@ -88,6 +84,11 @@
         max-width: toRem(400);
       }
 
+      .hero__title-word--whiteBG,
+      .hero__title-word--mustardBG {
+        max-width: toRem(265);
+      }
+
       .hero__title,
       .hero__info > p {
         margin-bottom: toRem(20);
@@ -99,29 +100,14 @@
         padding-block: toRem(20);
       }
 
-      .hero__title-word--whiteBG,
-      .hero__title-word--mustardBG {
-        max-width: toRem(215);
-      }
-
       .hero__info > p {
         font-size: toRem(14);
       }
     }
 
-    @media (max-width: toRem(995)) {
-      .hero__decor::after {
-        max-width: toRem(340);
-      }
-
-      .hero__title {
-        font-size: toRem(32);
-      }
-    }
-
     @media (max-width: toRem(912)) {
       .hero__decor::after {
-        max-width: toRem(280);
+        max-width: toRem(350);
       }
 
       .hero__info p {
@@ -134,46 +120,49 @@
       }
     }
 
-    @media (max-width: toRem(852)) {
-      .hero__title-word--whiteBG,
-      .hero__title-word--mustardBG {
-        padding: toRem(10);
+    @media (max-width: toRem(840)) {
+      padding: toRem(0);
+
+      .hero__info {
+        padding: toRem(30);
       }
     }
 
-    @media (max-width: toRem(756)) {
-      width: toRem(350);
-      padding: toRem(0);
-      background-color: transparent;
-      border: none;
-
+    @media (max-width: toRem(750)) {
       .hero__decor::after {
         display: none;
       }
 
-      .hero__info {
-        padding: toRem(0);
-      }
-
+      .hero__title-word--mustardBG,
       .hero__title-word--whiteBG {
-        background-color: $banner;
+        background-color: transparent;
+        padding: toRem(0);
+        display: none;
       }
 
       .hero__button {
         font-size: toRem(24);
         font-weight: normal;
         text-transform: uppercase;
+        padding: toRem(13);
       }
     }
 
-    @media (max-width: toRem(404)) {
-      max-width: toRem(350);
-      width: 100%;
-      padding-inline: toRem(20);
-      overflow: hidden;
+    @media (max-width: toRem(556)) {
+      .hero__info {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+      }
 
-      .hero__decor::after {
-        display: none;
+      .hero__title {
+        font-size: toRem(36);
+      }
+
+      .hero__button {
+        width: 100%;
+        max-width: 100%;
+        font-size: toRem(18);
       }
     }
   }

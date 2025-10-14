@@ -29,6 +29,20 @@
       padding-inline: toRem(50);
       gap: toRem(50);
     }
+
+    @media (max-width: toRem(500)) {
+      padding-inline: toRem(30);
+
+      .app__title {
+        font-size: toRem(28);
+        max-width: toRem(500);
+      }
+
+      .mobile__device {
+        max-width: toRem(290);
+        aspect-ratio: 1;
+      }
+    }
   }
 
   // .app__info
@@ -61,6 +75,7 @@
   // .app__download
   &__download {
     display: flex;
+    flex-wrap: wrap;
     gap: toRem(19);
   }
 
@@ -68,6 +83,11 @@
   &__img {
     width: toRem(204);
     height: toRem(71);
+    transition: scale;
+
+    @include universal-hover {
+      scale: 1.05;
+    }
   }
 
   // .app__mobile
@@ -209,8 +229,13 @@
     &__tags {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: toRem(6);
       margin-bottom: toRem(25);
+
+      @media (max-width: toRem(500)) {
+        justify-content: flex-start;
+      }
     }
 
     .tag__item {
@@ -223,7 +248,7 @@
       border-radius: toRem(12);
       transition: background-color 0.5s, color 0.5s;
 
-      &:hover {
+      @include universal-hover {
         background-color: $mustardLighter;
         color: $black;
       }
@@ -345,7 +370,7 @@
   color: $iconAcrion;
   transition: color 0.5s;
 
-  &:hover {
+  @include universal-hover {
     color: $mustardLighter;
   }
 }

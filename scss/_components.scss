@@ -9,11 +9,9 @@
   border-radius: toRem(8);
   transition: background-color 0.5s, color 0.5s;
 
-  @media (any-hover: hover) and (any-pointer: fine) {
-    &:hover {
-      background-color: $sky;
-      color: $black;
-    }
+  @include universal-hover {
+    background-color: $sky;
+    color: $black;
   }
 
   &--header {
@@ -48,6 +46,20 @@
     width: toRem(186);
     height: toRem(34);
   }
+
+  @media (max-width: toRem(570)) {
+    font-size: toRem(28);
+    white-space: nowrap;
+    font-weight: 500;
+
+    &--indent {
+      margin-bottom: toRem(50);
+    }
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .product {
@@ -66,10 +78,8 @@
     transition: scale 0.5s;
     flex-shrink: 0;
 
-    @media (any-hover: hover) and (any-pointer: fine) {
-      &:hover {
-        scale: 1.02;
-      }
+    @include universal-hover {
+      scale: 1.02;
     }
   }
 
@@ -95,11 +105,9 @@
       height: toRem(28);
     }
 
-    @media (any-hover: hover) and (any-pointer: fine) {
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
+    @include universal-hover {
+      cursor: pointer;
+      text-decoration: underline;
     }
   }
 
@@ -110,10 +118,8 @@
     color: $explore;
     text-transform: capitalize;
 
-    @media (any-hover: hover) and (any-pointer: fine) {
-      &:hover {
-        text-decoration: underline;
-      }
+    @include universal-hover {
+      text-decoration: underline;
     }
   }
 }

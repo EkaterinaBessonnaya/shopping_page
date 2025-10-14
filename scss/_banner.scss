@@ -90,6 +90,36 @@
         padding: toRem(50);
       }
     }
+
+    @media (max-width: toRem(500)) {
+      .banner__info {
+        padding: toRem(20);
+      }
+
+      .banner__title {
+        font-size: toRem(36);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .banner__title-word--white {
+        max-width: toRem(200);
+      }
+
+      .banner__time {
+        font-weight: 600;
+        font-size: toRem(22);
+      }
+
+      .banner__note {
+        font-size: toRem(22);
+        margin-bottom: toRem(30);
+      }
+
+      .banner__button {
+        padding: toRem(19);
+      }
+    }
   }
 
   // .banner__image-wrapper
@@ -147,6 +177,10 @@
 
     @media (max-width: toRem(1080)) {
       font-size: toRem(28);
+    }
+
+    @media (max-width: toRem(500)) {
+      font-size: toRem(22);
     }
   }
 

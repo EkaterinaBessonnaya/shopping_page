@@ -37,6 +37,10 @@
         width: 100%;
       }
 
+      .header__button {
+        font-size: toRem(18);
+      }
+
       .button--header {
         width: 100%;
       }
@@ -71,10 +75,8 @@
   &__link {
     transition: color 0.5s;
 
-    @media (any-hover: hover) and (any-pointer: fine) {
-      &:hover {
-        color: $mustard;
-      }
+    @include universal-hover {
+      color: $mustard;
     }
   }
 }

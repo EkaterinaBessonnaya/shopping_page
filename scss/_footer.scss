@@ -17,9 +17,9 @@
     @media (max-width: toRem(1440)) {
       padding: toRem(70);
 
-      .footer__menu {
-        gap: toRem(58);
-      }
+      // .footer__menu {
+      //   gap: toRem(28);
+      // }
 
       .footer__list-menu {
         gap: toRem(16);
@@ -28,6 +28,10 @@
       .footer__sub-title,
       .footer__item-menu {
         font-size: toRem(18);
+      }
+
+      .footer__list-menu {
+        gap: toRem(10);
       }
     }
 
@@ -78,17 +82,15 @@
     flex-shrink: 0;
     transition: scale 0.5s;
 
-    @media (any-hover: hover) and (any-pointer: fine) {
-    	&:hover {
-    		scale: 1.1;
-    	}
+    @include universal-hover {
+      scale: 1.1;
     }
   }
 
   // .footer__menu
   &__menu {
     display: flex;
-    gap: toRem(188);
+    gap: toRem(48);
     flex-wrap: wrap;
   }
 
@@ -102,7 +104,7 @@
     color: $footerSubTitle;
     margin-bottom: toRem(16);
 
-    &:hover {
+    @include universal-hover {
       text-decoration: underline;
       cursor: pointer;
     }
@@ -130,10 +132,8 @@
     cursor: pointer;
     transition: color 0.3s;
 
-    @media (any-hover: hover) and (any-pointer: fine) {
-      &:hover {
-        color: $white;
-      }
+    @include universal-hover {
+      color: $white;
     }
   }
 }
